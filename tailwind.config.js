@@ -4,8 +4,13 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+        'roboto-mono': ['Roboto Mono', 'monospace'],
+      },
+    },
   },
   plugins: [],
-  prefix: 'tw-',
+  // prefix: 'tw-',
 }
