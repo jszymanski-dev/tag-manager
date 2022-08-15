@@ -1,11 +1,11 @@
-import Logo from "./Logo";
-import Profile from "./Profile";
+import Logo from "../Logo";
+import Profile from "../Profile";
 
 const Header = () => {
 	return (
 		<header className="flex justify-between w-screen p-4 bg-slate-700">
 			<Logo />
-            <Profile />
+			<Profile />
 		</header>
 	);
 };
