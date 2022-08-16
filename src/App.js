@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import Header from "./components/layout/Header";
+import Navbar from "./components/layout/Navbar";
 // import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
@@ -9,7 +9,7 @@ import "./App.css";
 const App = () => {
 	return (
 		<Fragment>
-			<Header />
+			<Navbar />
 			<main className="container my-4 mx-auto px-4">
 				{/* <SignIn /> */}
 				<SignUp />
