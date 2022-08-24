@@ -1,0 +1,10 @@
+@use "sass:math";
+
+@mixin font-size($size) {
+	font-size: $size;
+	line-height: $size + 0.5rem;
+}
+
+@mixin box-shadow($size) {
+	box-shadow: 0px #{math.div($size, 4)} #{$size} -#{math.div($size, 4)} rgba(black, 0.2);
+}

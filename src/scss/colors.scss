@@ -1,0 +1,26 @@
+$colors-palettes: (
+	primary: (
+		100: #e7f6f2,
+		200: #a5c9ca,
+		300: #5f95a4,
+		400: #395b64,
+		500: #2c3333,
+	),
+	gray: (
+		50: #f8f8f8,
+		100: #f1f1f1,
+		200: #cfcfcf,
+		300: #8c8c8c,
+		400: #444444,
+		500: #222222,
+	),
+);
+
+:root {
+	@each $colorname, $palette in $colors-palettes {
+		@each $key, $value in $palette {
+			$keyname: "--color-" + $colorname + "-" + $key;
+			#{$keyname}: #{$value};
+		}
+	}
+}

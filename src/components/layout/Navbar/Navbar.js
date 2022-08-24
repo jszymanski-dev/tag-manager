@@ -1,13 +1,15 @@
 import Logo from "../Logo";
 import AccountNavbar from "../AccountNavbar";
 
-const Header = () => {
+import styles from './Navbar.module.scss';
+
+const Navbar = () => {
 	return (
-		<header className="flex justify-between w-screen p-4 bg-slate-700">
+		<nav className={styles.navbar}>
 			<Logo />
 			<AccountNavbar />
-		</header>
+		</nav>
 	);
 };
 
-export default Header;
+export default Navbar;

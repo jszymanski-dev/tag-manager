@@ -1,0 +1,12 @@
+@import "./scss/colors.scss";
+
+.link {
+	color: var(--color-blue-300);
+	text-decoration: none;
+	transition: ease 150ms;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

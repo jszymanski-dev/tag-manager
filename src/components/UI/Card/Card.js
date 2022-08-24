@@ -1,13 +1,7 @@
+import styles from "./Card.module.scss";
+
 const Card = ({ children, className }) => {
-	return (
-		<div
-			className={`my-4 p-4 border border-solid border-gray-200 rounded-md ${
-				className || ""
-			}`}
-		>
-			{children}
-		</div>
-	);
+	return <div className={`${styles.card} ${className || ""}`}>{children}</div>;
 };
 
 export default Card;
