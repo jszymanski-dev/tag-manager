@@ -1,5 +1,5 @@
-@import "/src/scss/breakpoints.scss";
-@import "/src/scss/mixins.scss";
+@import '/src/scss/breakpoints.scss';
+@import '/src/scss/mixins.scss';
 
 .input {
 	position: relative;
@@ -17,7 +17,7 @@
 		@include font-size(1.25rem);
 		color: var(--color-gray-200);
 		transform: translateY(-50%);
-		
+
 		&--pass {
 			left: auto;
 			right: 0.5rem;

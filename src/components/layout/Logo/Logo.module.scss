@@ -1,14 +1,19 @@
-@import "/src/scss/mixins.scss";
+@import '/src/scss/mixins.scss';
 
 .logo {
-	display: flex;
-	gap: 1rem;
-	margin: 0;
-	color: white;
-	font-family: "Roboto Mono", monospace;
-	font-weight: 700;
-	@include font-size(1.5rem);
+	$self: &;
 
+	margin: 0;
+
+	&__wrapper {
+		display: flex;
+		gap: 1rem;
+		color: white !important;
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 700;
+		@include font-size(1.5rem);
+		text-decoration: none !important;
+	}
 	&__icon {
 		padding: 0.25rem;
 		border-radius: 0.5rem;

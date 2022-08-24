@@ -19,7 +19,7 @@ $colors-palettes: (
 :root {
 	@each $colorname, $palette in $colors-palettes {
 		@each $key, $value in $palette {
-			$keyname: "--color-" + $colorname + "-" + $key;
+			$keyname: '--color-' + $colorname + '-' + $key;
 			#{$keyname}: #{$value};
 		}
 	}

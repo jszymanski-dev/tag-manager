@@ -1,13 +1,14 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
-import AuthFormWrapper from "../AuthFormWrapper";
-import Input from "../../UI/Input";
-import Button from "../../UI/Button";
-import Checkbox from "../../UI/Checkbox";
+import AuthFormWrapper from '../AuthFormWrapper';
+import Input from '../../UI/Input';
+import Button from '../../UI/Button';
+import Checkbox from '../../UI/Checkbox';
 
-import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import styles from "./SingUpForm.module.scss";
+import styles from './SingUpForm.module.scss';
 
 const SignUpForm = () => {
 	return (
@@ -22,7 +23,8 @@ const SignUpForm = () => {
 					id="confirm"
 					label={
 						<Fragment>
-							I accept <span className="link">Terms</span> and <span className="link">Privacy Policy</span>
+							I accept <span className="link">Terms</span> and{' '}
+							<span className="link">Privacy Policy</span>
 						</Fragment>
 					}
 				/>
@@ -31,7 +33,7 @@ const SignUpForm = () => {
 				</Button>
 			</form>
 			<p className={styles.form__alternate}>
-				Already have an account? <span className="link">Sign In</span>
+				Already have an account? <Link to="/sing-in">Sign In</Link>
 			</p>
 		</AuthFormWrapper>
 	);

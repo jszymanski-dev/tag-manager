@@ -8,17 +8,17 @@ $breakpoints: (
 );
 
 $media-breakpoint: (
-	max-xs: "screen and (max-width: #{map-get($breakpoints, sm) - 0.02}px)",
-	max-sm: "screen and (max-width: #{map-get($breakpoints, md) - 0.02}px)",
-	max-md: "screen and (max-width: #{map-get($breakpoints, lg) - 0.02}px)",
-	max-lg: "screen and (max-width: #{map-get($breakpoints, xl) - 0.02}px)",
-	max-xl: "screen and (max-width: #{map-get($breakpoints, xxl) - 0.02}px)",
+	max-xs: 'screen and (max-width: #{map-get($breakpoints, sm) - 0.02}px)',
+	max-sm: 'screen and (max-width: #{map-get($breakpoints, md) - 0.02}px)',
+	max-md: 'screen and (max-width: #{map-get($breakpoints, lg) - 0.02}px)',
+	max-lg: 'screen and (max-width: #{map-get($breakpoints, xl) - 0.02}px)',
+	max-xl: 'screen and (max-width: #{map-get($breakpoints, xxl) - 0.02}px)',
 
-	min-sm: "screen and (min-width: #{map-get($breakpoints, sm)}px)",
-	min-md: "screen and (min-width: #{map-get($breakpoints, md)}px)",
-	min-lg: "screen and (min-width: #{map-get($breakpoints, lg)}px)",
-	min-xl: "screen and (min-width: #{map-get($breakpoints, xl)}px)",
-	min-xxl: "screen and (min-width: #{map-get($breakpoints, xxl)}px)",
+	min-sm: 'screen and (min-width: #{map-get($breakpoints, sm)}px)',
+	min-md: 'screen and (min-width: #{map-get($breakpoints, md)}px)',
+	min-lg: 'screen and (min-width: #{map-get($breakpoints, lg)}px)',
+	min-xl: 'screen and (min-width: #{map-get($breakpoints, xl)}px)',
+	min-xxl: 'screen and (min-width: #{map-get($breakpoints, xxl)}px)',
 );
 
 @mixin media($breakpoint) {

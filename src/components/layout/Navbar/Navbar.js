@@ -1,5 +1,5 @@
-import Logo from "../Logo";
-import AccountNavbar from "../AccountNavbar";
+import Logo from '../Logo';
+import AccountNavbar from '../AccountNavbar';
 
 import styles from './Navbar.module.scss';
 

@@ -1,24 +1,34 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Button from "../../UI/Button";
-import Avatar from "../../UI/Avatar";
+import Button from '../../UI/Button';
+import Avatar from '../../UI/Avatar';
 
-import styles from "./AccountNavbar.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import styles from './AccountNavbar.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Profile = () => {
 	const [isOpened, setIsOpened] = useState(false);
+	const navigate = useNavigate();
 
 	const isLogged = false;
 
 	const toggleProfileDetails = () => {
-		setIsOpened((prevSnippet) => !prevSnippet);
+		setIsOpened(prevSnippet => !prevSnippet);
+	};
+
+	const navigateHandler = to => {
+		return event => {
+			event.stopPropagation();
+			setIsOpened(false);
+			navigate(to);
+		};
 	};
 
 	return (
 		<div className={styles.account}>
-			<div className={`${styles.account__wrapper} ${isOpened ? styles["account__wrapper--opened"] : ""}`}>
+			<div className={`${styles.account__wrapper} ${isOpened ? styles['account__wrapper--opened'] : ''}`}>
 				{!isOpened && (
 					<Button className={styles.account__button} variant="transparent" onClick={toggleProfileDetails}>
 						<Avatar />
@@ -34,8 +44,12 @@ const Profile = () => {
 						</div>
 						{!isLogged && (
 							<>
-								<Button variant="gray">Sing In</Button>
-								<Button variant="gray">Sing Up</Button>
+								<Button variant="gray" onClick={navigateHandler('/sing-in')}>
+									Sing In
+								</Button>
+								<Button variant="gray" onClick={navigateHandler('/sing-up')}>
+									Sing Up
+								</Button>
 							</>
 						)}
 						{isLogged && <p>LOGGED</p>}

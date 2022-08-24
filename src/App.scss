@@ -1,12 +1,32 @@
-@import "./scss/colors.scss";
+@import '/src/scss/breakpoints.scss';
 
-.link {
-	color: var(--color-blue-300);
-	text-decoration: none;
-	transition: ease 150ms;
-	cursor: pointer;
-
-	&:hover {
-		text-decoration: underline;
+.container {
+	margin: 1rem auto;
+	width: 100%;
+	padding: 0 1rem;
+}
+@include media(min-sm) {
+	.container {
+		width: calc(#{map-get($breakpoints, sm)}px - 2rem);
+	}
+}
+@include media(min-md) {
+	.container {
+		width: calc(#{map-get($breakpoints, md)}px - 2rem);
+	}
+}
+@include media(min-lg) {
+	.container {
+		width: calc(#{map-get($breakpoints, lg)}px - 2rem);
+	}
+}
+@include media(min-xl) {
+	.container {
+		width: calc(#{map-get($breakpoints, xl)}px - 2rem);
+	}
+}
+@include media(min-xxl) {
+	.container {
+		width: calc(#{map-get($breakpoints, xxl)}px - 2rem);
 	}
 }
